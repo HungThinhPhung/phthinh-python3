@@ -6,7 +6,8 @@ setup(
     version='0.2',
     packages=[
         'phthinh',
-        'phthinh.pattern'
+        'phthinh.pattern',
+        'phthinh.util'
     ],
     url='',
     license='MIT',
