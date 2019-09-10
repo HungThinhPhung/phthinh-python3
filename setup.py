@@ -4,6 +4,7 @@ setup(
     version='0.2',
     packages=[
         'phthinh',
+        'phthinh.pattern'
     ],
     url='',
     license='MIT',
