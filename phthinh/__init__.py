@@ -1,1 +1,1 @@
-from .os_command import *
+from .os_command import get_lst_file
