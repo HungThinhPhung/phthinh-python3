@@ -1,1 +1,1 @@
-import os_command
+from .os_command import *
