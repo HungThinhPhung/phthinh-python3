@@ -1,5 +1,4 @@
 from setuptools import setup
-from sphinx.environment.collectors import dependencies
 
 setup(
     name='phthinh',
