@@ -15,23 +15,26 @@ def format_api_result(func):
             result = func(*args, **kwargs)
             return jsonify({
                 'code': SUCCESS,
-                'status': 'success',
+                'status': 'SUCCESS',
                 'data': result,
                 'message': None,
             })
         except Exception as ex:
             logging.error(traceback.format_exc())
-            code = ex.__dict__.get('code', None)
+            code = ex.__dict__.get('code', UNKNOWN_EXCEPTION)
             if code is not None:
                 return jsonify({
                     'code': code,
                     'status': 'error',
                     'data': None,
-                    'message': str(ex)
+                    'message': 'Unidentified Server Error'
                 })
             return jsonify({
                 'code': UNKNOWN_EXCEPTION,
                 'status': 'error',
                 'data': None,
-                'message': str(ex)})
+                'message': 'Internal Server Error'
+            })
     return execute
+
+
